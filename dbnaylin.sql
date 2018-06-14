@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 11 Jun 2018 pada 06.55
--- Versi Server: 10.1.28-MariaDB
--- PHP Version: 5.6.32
+-- Generation Time: Jun 14, 2018 at 06:22 AM
+-- Server version: 10.1.26-MariaDB
+-- PHP Version: 7.1.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tabelfoto`
+-- Table structure for table `tabelfoto`
 --
 
 CREATE TABLE `tabelfoto` (
@@ -37,7 +37,7 @@ CREATE TABLE `tabelfoto` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tabelkomentar`
+-- Table structure for table `tabelkomentar`
 --
 
 CREATE TABLE `tabelkomentar` (
@@ -50,7 +50,7 @@ CREATE TABLE `tabelkomentar` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tabeltips`
+-- Table structure for table `tabeltips`
 --
 
 CREATE TABLE `tabeltips` (
@@ -62,17 +62,26 @@ CREATE TABLE `tabeltips` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tabeluser`
+-- Table structure for table `user`
 --
 
-CREATE TABLE `tabeluser` (
+CREATE TABLE `user` (
   `id_user` int(25) NOT NULL,
   `username` varchar(55) NOT NULL,
   `password` varchar(40) NOT NULL,
-  `level` int(2) NOT NULL,
+  `level` varchar(10) NOT NULL,
   `nama` varchar(20) NOT NULL,
-  `email` varchar(15) NOT NULL
+  `email` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id_user`, `username`, `password`, `level`, `nama`, `email`) VALUES
+(1, 'admin1', 'e00cf25ad42683b3df678c61f42c6bda', 'admin', 'Aulia Ika Meilinda', 'linda@gmail.com'),
+(2, 'admin2', 'c84258e9c39059a89ab77d846ddab909', 'admin', 'Naily Ainul M.', 'naily@gmail.com'),
+(3, 'rose', 'fcdc7b4207660a1372d0cd5491ad856e', 'user', 'Rose Park', 'rose@gmail.com');
 
 --
 -- Indexes for dumped tables
@@ -101,9 +110,9 @@ ALTER TABLE `tabeltips`
   ADD KEY `idx_tipsuser` (`id_user`);
 
 --
--- Indexes for table `tabeluser`
+-- Indexes for table `user`
 --
-ALTER TABLE `tabeluser`
+ALTER TABLE `user`
   ADD PRIMARY KEY (`id_user`);
 
 --
@@ -115,47 +124,43 @@ ALTER TABLE `tabeluser`
 --
 ALTER TABLE `tabelfoto`
   MODIFY `id_foto` int(50) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `tabelkomentar`
 --
 ALTER TABLE `tabelkomentar`
   MODIFY `id_komentar` int(50) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `tabeltips`
 --
 ALTER TABLE `tabeltips`
   MODIFY `id_tips` int(20) NOT NULL AUTO_INCREMENT;
-
 --
--- AUTO_INCREMENT for table `tabeluser`
+-- AUTO_INCREMENT for table `user`
 --
-ALTER TABLE `tabeluser`
-  MODIFY `id_user` int(25) NOT NULL AUTO_INCREMENT;
-
+ALTER TABLE `user`
+  MODIFY `id_user` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `tabelfoto`
+-- Constraints for table `tabelfoto`
 --
 ALTER TABLE `tabelfoto`
-  ADD CONSTRAINT `tabelfoto_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `tabeluser` (`id_user`);
+  ADD CONSTRAINT `tabelfoto_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`);
 
 --
--- Ketidakleluasaan untuk tabel `tabelkomentar`
+-- Constraints for table `tabelkomentar`
 --
 ALTER TABLE `tabelkomentar`
-  ADD CONSTRAINT `tabelkomentar_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `tabeluser` (`id_user`),
+  ADD CONSTRAINT `tabelkomentar_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`),
   ADD CONSTRAINT `tabelkomentar_ibfk_2` FOREIGN KEY (`id_foto`) REFERENCES `tabelfoto` (`id_foto`);
 
 --
--- Ketidakleluasaan untuk tabel `tabeltips`
+-- Constraints for table `tabeltips`
 --
 ALTER TABLE `tabeltips`
-  ADD CONSTRAINT `tabeltips_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `tabeluser` (`id_user`);
+  ADD CONSTRAINT `tabeltips_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
