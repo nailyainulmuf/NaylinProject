@@ -11,7 +11,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
-	<!--Navbar-->
+	<!--Navbar sm kyk modal(daftar)-->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -40,9 +40,13 @@
 		}
 
 		.judul{
-			background-image: url(http://www.porcelaingres.com/img/ambienti/URBAN-GREAT/pav-urban-WHITE.jpg);
-			background-repeat: no-repeat;
+			/*background-image: url(http://www.porcelaingres.com/img/ambienti/URBAN-GREAT/pav-urban-WHITE.jpg);
+			background-image: url(https://anaisindia.com/wp-content/uploads/2016/11/digital-photography.jpg);*/
+			background-image: url(https://istyle.id/wp-content/uploads//2017/04/FUJIFILM-X-T10-1.jpg);
+			
+			/*background-repeat: no-repeat;
 			height: 570px;
+			width: 1333px;*/
 			position: center;
 		}
 
@@ -76,17 +80,44 @@
 
 	<!--Judul+gambar-->
 	<div class="judul">
-	  	<br><br><br><br><br><br><br><br><br><br><br><br><br>
+	  	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	  	<!--judul-->
 	  	<div class="row">
 			<div class="col"></div>
 			<div class="col"></div>
-			<div class="col judultext">
-				<big><font style="color: #CD5C5C">Nay</font><font style="color: #4682B4">Lin</font></big> Project
-				<br>
-				<font style="font-family:arial; font-size: 12;" class="text-center">
-					Belum punya akun? <a href="#">Daftar</a>
-				</font>
+			<div class="col">
+				<big>
+					<font class="judultext" style="color: #CD5C5C">Nay</font>
+					<font class="judultext" style="color: #4682B4">Lin</font>
+					<font class="judultext">&nbspProject</font>
+				</big>
 			</div>
+		</div>
+
+		<!--btn login dan daftar-->
+		<br>
+		<div class="row">
+			<div class="col"></div>
+			<div class="col"></div>
+			<div class="col"></div>
+			<div class="col"></div>
+			<div class="col">
+				<!--button login-->
+				<button type="button" class="btn btn-basic btn-lg btn-block">
+					<a href='<?php echo base_url("index.php/Login/"); ?>'>
+						<span class="glyphicon glyphicon-log-in" style="color: #808080"></span> 
+						<font style="color: #808080">Login</font>
+					</a>
+				</button>
+
+				<!--text daftar-->
+				<center><font style="font-family:arial; font-size: 12;" class="text-center">
+					Belum punya akun? 
+					<a href='<?php echo base_url("index.php/Login/create"); ?>'>Daftar<span class="glyphicon glyphicon-user"></a>
+				</font></center>
+				<br><br><br><br><br><br><br><br><br><br><br><br><br>
+			</div>
+			<div class="col"></div>
 		</div>
 	</div>
 
@@ -143,9 +174,8 @@
 			<font style="color: #F8F8FF">instagram | @lalalalla </font><br>
 			<font style="color: #F8F8FF">twitter | @lililili</font>
 			<br><br>
-			<p><span class="badge badge-secondary">admin :</span></p>
-			<font style="color: #F8F8FF">username | password </font><br>
-			<font style="color: #F8F8FF">admin | admin</font>
+			<p><span class="badge badge-secondary">hi everyone</span></p>
+			<font style="color: #F8F8FF">love photography, this is our galery</font><br>
 	</div>
 
 </body>

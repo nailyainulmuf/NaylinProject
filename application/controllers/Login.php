@@ -47,4 +47,19 @@ class Login extends CI_Controller{
 		$this->session->sess_destroy();
 		redirect('login', 'refresh');
 	}
+
+	public function create()
+	{
+		$this->load->model('user');
+		$this->form_validation->set_rules('username','username','trim|required');
+		$this->form_validation->set_rules('password','password','trim|required');
+
+		if($this->form_validation->run() == FALSE){
+			$this->load->view('daftar');
+		}
+		else{
+			$this->user->insertUser();
+			$this->load->view('loginView');
+		}
+	}
 }

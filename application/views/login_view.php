@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="">
-	<head>
+<head>
+	<title>NayLin Project</title>
+	<!--icon nama web-->
+	<link rel="icon" type="image/png" href="https://images.vexels.com/media/users/3/127364/isolated/preview/06a7e759827c7b212d7c7eb7dd643c0d-camera-travel-icon-by-vexels.png"></link>
+
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Login</title>
 
 		<!-- Bootstrap CSS -->
-		<link rel="icon" type="image/png" href="<?php echo base_url ('assets/images/icons/favicon.ico') ?>">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -98,8 +100,12 @@ h2 {
 								  
 		<div class="container">
 		<div class="col-md-4">
-			<br><br><br><br><br><br><br><br><br><br>
-		<center><font color="#ffffff"><h1>Login</h1>
+			<!--judul-->
+			  <div class="page-header" style="color:white">
+			  	<h1 class="text-center"><b>Halaman Login</b></h1>
+			  </div>
+			
+		<center><font color="#ffffff">
 			<?php echo form_open('login/cekLogin'); ?>
 
 				<?php echo validation_errors(); ?>

@@ -10,7 +10,7 @@ class User extends CI_Model{
 	public function login($username, $password)
 	{
 		$this->db->select('id_user, username, password, level');
-		$this->db->from('user');
+		$this->db->from('tabeluser');
 		$this->db->where('username', $username);
 		$this->db->where('password', MD5($password));
 		$query = $this->db->get();
@@ -19,5 +19,15 @@ class User extends CI_Model{
 		}else{
 			return false;
 		}
+	}
+
+	public function insertUser()
+	{
+		$object = array(
+			'username'=>$this->input->post('username'),
+			'password'=>MD5($this->input->post('password') )
+		); 
+
+		$this->db->insert('tabeluser', $object);
 	}
 }
