@@ -15,7 +15,6 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<style>
@@ -105,8 +104,8 @@
 				<!--button login-->
 				<button type="button" class="btn btn-basic btn-lg btn-block">
 					<a href='<?php echo base_url("index.php/Login/"); ?>'>
-						<span class="glyphicon glyphicon-log-in" style="color: #808080"></span> 
-						<font style="color: #808080">Login</font>
+						<span class="glyphicon glyphicon-log-in" style="color: #4682B4"></span> 
+						<font style="color: #4682B4">Login</font>
 					</a>
 				</button>
 
@@ -133,37 +132,80 @@
 	    <li class="nav-item">
 	      <a class="nav-link" href="#">Contact</a>
 	    </li>
-	    <li class="nav-item">
-	      <a class="nav-link disabled" href="#">Disabled</a>
-	    </li>
 	  </ul>
+	  <ul class="nav navbar-nav navbar-right">
+      <li><a href='<?php echo base_url("index.php/Pengguna/"); ?>'><span class="glyphicon glyphicon-user"></span>Profil</a></li>
+    </ul>
 	</nav>
 
-	<!--gallery-->
+	<!--sekilas info home-->
 	<div class="container">
-
-	  <div class="page-header" style="color:black">
-	  	<h1 class="text-center"><b>Gallery :)</b></h1>
+	  <div>
+		<h1>Welcome to NayLinProject </h1>
+		<p>NayLin project adalah tempat website yang menampilkan kumpulan hasil foto dari para user. Dimana user akan mengaplod lalu ditampilkan di website. Para user yang lain insyaallah juga bisa berkomentar pada tiap foto, dengan syarat dia adalah user.</p>
+		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
 	  </div>
 
-		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+	  <!--Gallery-->
+	  <br>
+	  <div class="page-header" style="color:black">
+	  	<h1 class="text-center">Gallery :)</h1>
+	  </div>
+
+	  <p>Klik aja fotonya.</p>
+	  <div class="row">
+    	
+    	<div class="col-md-4">
+	      <div class="thumbnail">
+    	    <a href="/w3images/lights.jpg" target="_blank">
+        	  <img src="https://rumahdijual.com/attachments/kota-lain/2516369d1427980988-satu-global-property-menjual-property-di-melbourne-australia-logo-satu-global-property.jpg" alt="satu" style="width:100%">
+	          <div class="caption">
+	            <p>ini foto pertama</p>
+	          </div>
+	        </a>
+	      </div>
+	    </div>
+
+	    <div class="col-md-4">
+	      <div class="thumbnail">
+	        <a href="/w3images/nature.jpg" target="_blank">
+	          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Augsburg_Tram_2.svg" alt="dua" style="width:100%">
+	          <div class="caption">
+	            <p>kalo ini foto yang kedua</p>
+	          </div>
+	        </a>
+	      </div>
+	    </div>
+
+	    <div class="col-md-4">
+	      <div class="thumbnail">
+	        <a href="/w3images/fjords.jpg" target="_blank">
+	          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Bundesstra%C3%9Fe_3_number.svg/1200px-Bundesstra%C3%9Fe_3_number.svg.png" alt="tiga" style="width:100%">
+	          <div class="caption">
+	            <p>terakhir nih, foto ketiga</p>
+	          </div>
+	        </a>
+	      </div>
+	    </div>
+
+	  </div>
 
 	</div>
 	<br><br><br><br>
 
-	<!--Footer handmade-->
+	<!--Footer handmade(contact)-->
 	<div class="futer">
 		<br>
 		<font style="font-family:times new roman; font-size: 15;" class="text-center">
