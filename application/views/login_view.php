@@ -29,7 +29,6 @@
       color:#ff5050  !important;
   }
 
-  
   .mt {
 	margin-top: 80px;
 }
@@ -125,7 +124,7 @@ h2 {
 				
 					<h2><button type="Submit" class="btn btn-primary">Submit</button>
 					<br><br>
-					<a class="btn btn-default" href="#"><font color="black">
+					<a class="btn btn-default" href="<?php echo base_url('index.php/registrasi/create/') ?>"><font color="black">
 							Create new account
 							<i class="glyphicon glyphicon-arrow-right"></i>						
 						</a>
