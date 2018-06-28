@@ -39,19 +39,32 @@
 	  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 	  	<div class="form-group">
 			
-			<?php echo form_open('login/create') ?>
+			<?php echo form_open('registrasi/create'); ?>
 
-			<?php echo validation_errors(); ?>
+				<?php echo validation_errors(); ?>
+		
 			<label for="">Username</label>
-			<input type="text" class="form-control" id="username" name="username" >
+			<input type="text" class="form-control" id="username" name="username" placeholder="username.." >
 			<br>
 			<label for="">Password</label>
-			<input type="password" class="form-control" id="password" name="password">
+			<input type="password" class="form-control" id="password" name="password" placeholder="password..">
+			<br>
+			<label for="">Confirm Password</label>
+			<input type="password" class="form-control" id="confirm" name="confirm" placeholder="konfirmasi password..">
+			<br>
+			<label for="">Nama Lengkap</label>
+			<input type="text" class="form-control" id="nama" name="nama" placeholder="Nama lengkap anda..">
+			<br>
+			<label for="">Email</label>
+			<input type="email" class="form-control" id="email" name="email" placeholder="email..">
 
 			<br>
 			<center>
 				<br>
 				<button type="Submit" class="btn btn-default">Daftar</button>
+				<a class="btn btn-danger" href="<?php echo base_url('index.php/login') ?>"><font color="white">
+							Kembali					
+						</a>
 			</center>
 			
 			<?php echo form_close(); ?>
