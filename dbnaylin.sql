@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 14, 2018 at 06:22 AM
+-- Generation Time: Jun 30, 2018 at 02:45 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
 
@@ -25,14 +25,46 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tabelfoto`
+-- Table structure for table `foto`
 --
 
-CREATE TABLE `tabelfoto` (
+CREATE TABLE `foto` (
   `id_foto` int(50) NOT NULL,
-  `id_user` int(25) NOT NULL,
-  `foto` varchar(255) NOT NULL
+  `fk_user` int(11) NOT NULL,
+  `photo` varchar(255) NOT NULL,
+  `judul` varchar(50) NOT NULL,
+  `deskripsi` varchar(300) NOT NULL,
+  `id_kategori` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `foto`
+--
+
+INSERT INTO `foto` (`id_foto`, `fk_user`, `photo`, `judul`, `deskripsi`, `id_kategori`) VALUES
+(2, 2, 'Croft8954_By_Pater_J_Hosey_Landscape_Photography.jpg', 'Croft8954', 'Landscape Photography By Pater J Hosey (Photographer)', 2),
+(4, 2, 'Kingfisher_feeding_By_martinlawrence1.PNG', 'Kingfisher feeding', 'Wildlife Photography By Martin Lawrence (Photographer)', 3),
+(5, 2, 'Karl_Loxley_1_By_Pater_J_Hosey_Performing1.jpg', 'Performing Karl Loxley 1', 'Stage By Pater J Hosey (Photographer)', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kategori`
+--
+
+CREATE TABLE `kategori` (
+  `id_kategori` int(11) NOT NULL,
+  `nama_kategori` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `kategori`
+--
+
+INSERT INTO `kategori` (`id_kategori`, `nama_kategori`) VALUES
+(1, 'Stage'),
+(2, 'Landscape'),
+(3, 'Wildlife');
 
 -- --------------------------------------------------------
 
@@ -81,18 +113,26 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id_user`, `username`, `password`, `level`, `nama`, `email`) VALUES
 (1, 'admin1', 'e00cf25ad42683b3df678c61f42c6bda', 'admin', 'Aulia Ika Meilinda', 'linda@gmail.com'),
 (2, 'admin2', 'c84258e9c39059a89ab77d846ddab909', 'admin', 'Naily Ainul M.', 'naily@gmail.com'),
-(3, 'rose', 'fcdc7b4207660a1372d0cd5491ad856e', 'user', 'Rose Park', 'rose@gmail.com');
+(3, 'rose', 'fcdc7b4207660a1372d0cd5491ad856e', 'user', 'Rose Park', 'rose@gmail.com'),
+(8, 'hasna', 'b83ba8dc98c5fee2a3e5906752d48e31', 'user', 'Hasna Bararah Mufida', 'hasna@gmail.com');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `tabelfoto`
+-- Indexes for table `foto`
 --
-ALTER TABLE `tabelfoto`
+ALTER TABLE `foto`
   ADD PRIMARY KEY (`id_foto`),
-  ADD KEY `idx_fotouser` (`id_user`);
+  ADD KEY `idx_fotouser` (`fk_user`),
+  ADD KEY `id_kategori` (`id_kategori`);
+
+--
+-- Indexes for table `kategori`
+--
+ALTER TABLE `kategori`
+  ADD PRIMARY KEY (`id_kategori`);
 
 --
 -- Indexes for table `tabelkomentar`
@@ -120,10 +160,15 @@ ALTER TABLE `user`
 --
 
 --
--- AUTO_INCREMENT for table `tabelfoto`
+-- AUTO_INCREMENT for table `foto`
 --
-ALTER TABLE `tabelfoto`
-  MODIFY `id_foto` int(50) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `foto`
+  MODIFY `id_foto` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `kategori`
+--
+ALTER TABLE `kategori`
+  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tabelkomentar`
 --
@@ -138,23 +183,24 @@ ALTER TABLE `tabeltips`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_user` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `tabelfoto`
+-- Constraints for table `foto`
 --
-ALTER TABLE `tabelfoto`
-  ADD CONSTRAINT `tabelfoto_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`);
+ALTER TABLE `foto`
+  ADD CONSTRAINT `foto_ibfk_1` FOREIGN KEY (`fk_user`) REFERENCES `user` (`id_user`),
+  ADD CONSTRAINT `foto_ibfk_2` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`);
 
 --
 -- Constraints for table `tabelkomentar`
 --
 ALTER TABLE `tabelkomentar`
   ADD CONSTRAINT `tabelkomentar_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`),
-  ADD CONSTRAINT `tabelkomentar_ibfk_2` FOREIGN KEY (`id_foto`) REFERENCES `tabelfoto` (`id_foto`);
+  ADD CONSTRAINT `tabelkomentar_ibfk_2` FOREIGN KEY (`id_foto`) REFERENCES `foto` (`id_foto`);
 
 --
 -- Constraints for table `tabeltips`
