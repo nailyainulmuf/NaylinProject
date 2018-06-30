@@ -62,6 +62,11 @@ $acl = array(
 	),
 	'm_admin' => array(
 		'admin' => true,
+		'user' => false,
+	),
+	'admin_foto' => array(
+		'admin' => true,
+		'user' => false,
 	),
 	'portofolio' => array(
 		'user' => true,
