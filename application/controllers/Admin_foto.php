@@ -4,7 +4,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Admin_foto extends CI_Controller {
 	public function __construct()
 	{
-		
 		parent::__construct();
 		if($this->session->userdata('logged_in')){
 			$session_data = $this->session->userdata('logged_in');
@@ -54,9 +53,6 @@ class Admin_foto extends CI_Controller {
 		$this->form_validation->set_rules('kategori', 'Kategori', 'trim|required');
 		$this->form_validation->set_rules('deskripsi', 'Deskripsi', 'trim|required');
 		
-
-		
-
 		if ($this->form_validation->run() == FALSE){
 			$this->load->view('input_data_foto', $data);
 		}else{
@@ -78,6 +74,37 @@ class Admin_foto extends CI_Controller {
 						$this->load->view('sukses_input_foto');
 				}
 		}
+	}
+
+	public function update($id)
+	{
+		if($this->session->userdata('logged_in')){
+			$session_data = $this->session->userdata('logged_in');
+			$data['username'] = $session_data['username'];
+			$data['level'] = $session_data['level'];
+			$data['id_user'] = $session_data['id_user'];
+			
+		}
+		$this->load->model('foto_model');
+		$this->form_validation->set_rules('judul', 'Judul', 'trim|required');
+		$this->form_validation->set_rules('deskripsi', 'Deskripsi', 'trim|required');
+		
+		$data['admin_foto']=$this->foto_model->getFoto($id);
+
+		if ($this->form_validation->run() == FALSE){
+			$this->load->view('edit_data_foto', $data);
+		}else{
+			$this->foto_model->updateById($id);
+			$this->load->view('sukses_edit_foto');
+
+		}
+	}
+
+	public function delete($id)
+	{
+		$this->load->model('foto_model');
+		$this->foto_model->delete($id);
+		redirect('admin_foto');
 	}
 
 }

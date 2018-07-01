@@ -31,4 +31,15 @@ class Foto_model extends CI_Model{
 
 	}
 
+	public function updateById($id){
+		$data = array ('judul'=>$this->input->post('judul'), 'deskripsi'=>$this->input->post('deskripsi'));
+		$this->db->where('id_foto', $id);
+		$this->db->update('foto', $data);
+	}
+
+	public function delete($id){
+		$this->db->where('id_foto', $id);
+		$this->db->delete('foto');
+	}
+
 }
