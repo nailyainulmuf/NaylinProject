@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 30, 2018 at 02:45 PM
+-- Generation Time: Jul 02, 2018 at 02:43 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
 
@@ -43,8 +43,17 @@ CREATE TABLE `foto` (
 
 INSERT INTO `foto` (`id_foto`, `fk_user`, `photo`, `judul`, `deskripsi`, `id_kategori`) VALUES
 (2, 2, 'Croft8954_By_Pater_J_Hosey_Landscape_Photography.jpg', 'Croft8954', 'Landscape Photography By Pater J Hosey (Photographer)', 2),
-(4, 2, 'Kingfisher_feeding_By_martinlawrence1.PNG', 'Kingfisher feeding', 'Wildlife Photography By Martin Lawrence (Photographer)', 3),
-(5, 2, 'Karl_Loxley_1_By_Pater_J_Hosey_Performing1.jpg', 'Performing Karl Loxley 1', 'Stage By Pater J Hosey (Photographer)', 1);
+(5, 2, 'Karl_Loxley_1_By_Pater_J_Hosey_Performing1.jpg', 'Performing Karl Loxley', 'Stage By Pater J Hosey (Photographer)', 1),
+(6, 2, 'Kingfisher_feeding_By_martinlawrence.PNG', 'Kingfisher feeding', 'Wildlife Photography By Martin Lawrence (Photographer)', 3),
+(7, 1, 'NikiGillis_By_Pater_J_Hosey_Performing.jpg', 'NikiGillis', 'Performing photography By Pater J Hosey', 1),
+(8, 1, 'Croft8899_By_Pater_J_Hosey_Landscape_Photography.jpg', 'Croft8899', 'Landscape Photography By Pater J Hosey (Photographer)', 2),
+(9, 1, 'Coyote_hunting_in_Yellowstone_NP_By_martinlawrence.PNG', 'Coyote hunting in Yellowstone NP', 'Wildlife Photography By Martin Lawrence (Photographer)', 3),
+(10, 1, 'Catriona_Murray_3_By_Pater_J_Hosey_Performing.jpg', 'Catriona Murray', 'Performing photography By Pater J Hosey', 1),
+(11, 1, 'Culkien_BayBy_Pater_J_Hosey_Landscape_Photography.jpg', 'Culkien Bay', 'Landscape Photography By Pater J Hosey (Photographer)', 2),
+(12, 1, 'Puffins_on_Farne_Islands_By_martinlawrence.PNG', 'Puffins on Farne Islands', 'Wildlife Photography By Martin Lawrence (Photographer)', 3),
+(13, 1, 'TheRealMcCoy1_By_Pater_J_Hosey_Performing.jpg', 'TheRealMcCoy1', 'Theather By Pater J Hosey', 1),
+(14, 1, 'Red_Fox_in_autumn_sunshine_By_martinlawrence.PNG', 'Red Fox in autumn sunshine', 'Wildlife Photography By Martin Lawrence (Photographer)', 3),
+(15, 1, 'Sunset_at_Lytham_Jetty,_Lancashire_By_martinlawrence.PNG', 'Sunset at Lytham Jetty, Lancashire', 'Landscape Photography By martinlawrence (Photographer)', 2);
 
 -- --------------------------------------------------------
 
@@ -163,7 +172,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `foto`
 --
 ALTER TABLE `foto`
-  MODIFY `id_foto` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_foto` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `kategori`
 --
@@ -183,7 +192,7 @@ ALTER TABLE `tabeltips`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_user` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- Constraints for dumped tables
 --
