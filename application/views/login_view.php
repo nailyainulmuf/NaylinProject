@@ -19,7 +19,11 @@
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
 		<style>
-  body 
+  body
+  {
+	background-image: url(https://istyle.id/wp-content/uploads//2017/04/FUJIFILM-X-T10-1.jpg);
+    background-size: auto;
+  }
   .navbar {
       font-family: Montserrat, sans-serif;
       font-size: 1em !important;
@@ -79,23 +83,22 @@ h2 {
 
 
   </style>
-	</head>
-	<body>
+</head>
 
-				
+<body>
+
      <div class="page-content">
     	<div class="row">
 		  <div class="col-md-3">
 		  	<div class="sidebar content-box" style="display: block;">
-                <img src="<?php echo base_url ('assets/images/bg-login1.png') ?>" alt="fashion" width="1566" height="774">
+                <img src="https://istyle.id/wp-content/uploads//2017/04/FUJIFILM-X-T10-1.jpg">
+                 <!--alt="fashion" width="1566" height="774"-->
              </div>
 		  </div>
 
 		  <div class="row">
           <div class="col-md-3 col-md-offset-1  panel-warning">
             <div class="box-large">
-              <!--  -->
-		  
 								  
 		<div class="container">
 		<div class="col-md-4">
@@ -114,16 +117,20 @@ h2 {
 					<div class="form-group">
 						<h2>
 						<label for="">Username</label>
-						<input type="text" class="form-control" id="username" name="username" placeholder="input field">
+						<input type="text" class="form-control" id="username" name="username" placeholder="Masukkan Username">
 					</div>
 					<div class="form-group">
 						<h2>
 						<label for="">Password</label>
-						<input type="password" class="form-control" id="password" name="password" placeholder="input field">
+						<input type="password" class="form-control" id="password" name="password" placeholder="Masukkan Password">
 					</div>
 				
-					<h2><button type="Submit" class="btn btn-primary">Submit</button>
-					<br><br>
+					<h2>
+						<button type="Submit" class="btn btn-primary">Login</button>
+						<a class="btn btn-danger" href="<?php echo base_url('index.php/portofolio') ?>"><font color="white">
+							Kembali					
+						</a>
+					<br><br><br><br>
 					<a class="btn btn-default" href="<?php echo base_url('index.php/registrasi/create/') ?>"><font color="black">
 							Create new account
 							<i class="glyphicon glyphicon-arrow-right"></i>						

@@ -52,56 +52,43 @@
         <div class="row">
           <div class="col-md-9">
             <div class="content-box-large">
-              <h1>Tambah Data Foto</h1>
+              <h1>Tambah Data Tips</h1>
     
-      <?php echo form_open_multipart('admin_foto/create'); ?>
+      <?php echo form_open_multipart('admin_tips/create'); ?>
 
         <?php echo validation_errors(); ?>
           <div class="form-group">
-            <label for="">Judul Foto</label>
-            <input type="text" class="form-control" id="judul" name="judul" placeholder="Judul..">
+            <label for="">Judul Tips</label>
+            <input type="text" class="form-control" id="judul" name="judul" placeholder="Masukkan Judul Tips disini">
           </div>
           <div class="form-group">
-            <label for="">Foto</label>
-            <input type="file" name="userfile" size="20">
-          </div>
-          <div class="form-group">
-            <label for="">Kategori</label>
-            <select name="kategori" class="form-control">
-              <option selected="selected">---</option>
-              <?php foreach ($kategori_list as $key) : ?>
-              <option value="<?php echo $key['id_kategori'] ?>"><?php echo $key['nama_kategori']?></option>
-              <?php endforeach?>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="">Deskripsi</label>
-            <input type="text" class="form-control" id="deskripsi" name="deskripsi" placeholder="Deskripsi Foto..">
+            <label for="">Tips</label>
+            <input type="text" class="form-control" id="tips" name="tips" placeholder="Masukkan Isi Tips disini">
              <input type="hidden" class="form-control" id="fk_user" name="fk_user" value="<?php echo $id_user ?>">
+          </div>
+		  <div class="form-group">
+            <label for="">ID_user</label>
+            <input type="text" class="form-control" id="id_user" name="id_user" placeholder="Masukkan ID User disini">
           </div>
         
           <button type="Submit" class="btn btn-primary">Simpan</button>
-          <a href="<?php echo base_url('index.php/admin_foto/') ?>" class="btn btn-info">Kembali</a>
+          <a href="<?php echo base_url('index.php/admin_tips/') ?>" class="btn btn-info">Kembali</a>
       <?php echo form_close(); ?>
         </div>
-
-
-        
-
 
       </div>
     </div>
     </div>
 
     <footer>
-         <div class="container">
+        <div class="container">
          
             <div class="copy text-center">
-               Copyright 2018 <a href='#'>Website NayLinProject</a>
+               Copyright &copy 2018 <a href='#'>Website NayLinProject</a>
             </div>
             
-         </div>
-      </footer>
+        </div>
+    </footer>
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

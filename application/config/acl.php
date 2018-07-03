@@ -71,6 +71,10 @@ $acl = array(
 	'portofolio' => array(
 		'user' => true,
 		'admin' => true,
+	),
+	'admin_tips' => array(
+		'admin' => true,
+		'user' => false,
 	)
 
 );

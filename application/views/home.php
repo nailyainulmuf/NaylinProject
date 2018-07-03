@@ -39,8 +39,6 @@
 		}
 
 		.judul{
-			/*background-image: url(http://www.porcelaingres.com/img/ambienti/URBAN-GREAT/pav-urban-WHITE.jpg);
-			background-image: url(https://anaisindia.com/wp-content/uploads/2016/11/digital-photography.jpg);*/
 			background-image: url(https://istyle.id/wp-content/uploads//2017/04/FUJIFILM-X-T10-1.jpg);
 			
 			/*background-repeat: no-repeat;
@@ -79,7 +77,7 @@
 
 	<!--Judul+gambar-->
 	<div class="judul">
-	  	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	  	<br><br><br><br><br><br><br><br><br><br><br><br>
 	  	<!--judul-->
 	  	<div class="row">
 			<div class="col"></div>
@@ -112,9 +110,9 @@
 				<!--text daftar-->
 				<center><font style="font-family:arial; font-size: 12;" class="text-center">
 					Belum punya akun? 
-					<a href='<?php echo base_url("index.php/Login/create"); ?>'>Daftar<span class="glyphicon glyphicon-user"></a>
+					<a href='<?php echo base_url("index.php/registrasi/create"); ?>'>Daftar<span class="glyphicon glyphicon-user"></a>
 				</font></center>
-				<br><br><br><br><br><br><br><br><br><br><br><br><br>
+				<br><br><br><br><br><br><br><br><br><br><br><br>
 			</div>
 			<div class="col"></div>
 		</div>
@@ -134,9 +132,21 @@
 	    </li>
 	  </ul>
 	  <ul class="nav navbar-nav navbar-right">
-      <li><a href='<?php echo base_url("index.php/Pengguna/"); ?>'><span class="glyphicon glyphicon-user"></span>Profil</a></li>
+      <li><a href=''><span class="glyphicon glyphicon-user"></span>Profil</a></li>
     </ul>
 	</nav>
+
+	<div>
+		<br>
+		<center>
+			<button type="button" class="btn btn-primary">
+				<a href="<?php echo base_url("index.php/User/"); ?>">
+					<font style="color: white;">LOGIN BAIK</font>
+				</a>
+			</button>
+		</center>
+		<br>
+	</div>
 
 	<!--sekilas info home-->
 	<div class="container">
@@ -211,6 +221,7 @@
 		<font style="font-family:times new roman; font-size: 15;" class="text-center">
 			THIS IS FOOTER
 		</font>
+		
 			<br><br>
 			<p><span class="badge badge-secondary">contact :</span></p>
 			<font style="color: #F8F8FF">instagram | @lalalalla </font><br>

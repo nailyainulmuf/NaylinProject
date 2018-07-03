@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- jQuery UI -->
     <link href="https://code.jquery.com/ui/1.10.3/themes/redmond/jquery-ui.css" rel="stylesheet" media="screen">
+    <link rel="icon" type="image/png" href="https://cdn2.iconfinder.com/data/icons/seo-web-optomization-ultimate-set/512/custom_settings-512.png"></link>
 
     <!-- Bootstrap --><!-- 
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
@@ -44,11 +45,11 @@
                 <ul class="nav">
                     <!-- Main menu -->
                     <li class="current"><a href="<?php echo base_url('index.php/m_admin') ?>"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
-                                        <li class="submenu">
-                    <li class="#"><a href="<?php echo base_url('index.php/admin_foto') ?>"><i class="glyphicon glyphicon-picture"></i> Foto</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-list"></i> Tips</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-list-alt"></i> Komentar</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-user"></i> User</a></li>  
+                    <li class="submenu">
+                      <li class="#"><a href="<?php echo base_url('index.php/admin_foto') ?>"><i class="glyphicon glyphicon-picture"></i> Foto</a></li>
+                      <li class="#"><a href="<?php echo base_url('index.php/admin_tips') ?>"><i class="glyphicon glyphicon-list"></i> Tips</a></li>
+                      <li><a href="#"><i class="glyphicon glyphicon-list-alt"></i> Komentar</a></li>
+                      <li><a href="#"><i class="glyphicon glyphicon-user"></i> User</a></li>  
                     </li>
                 </ul>
              </div>
@@ -70,7 +71,7 @@
          <div class="container">
          
             <div class="copy text-center">
-               Copyright 2018 <a href='#'>Website NayLinProject</a>
+               Copyright 2018 &copy <a href='#'>Website NayLinProject</a>
             </div>
             
          </div>
