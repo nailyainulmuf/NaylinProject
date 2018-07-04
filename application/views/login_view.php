@@ -19,70 +19,24 @@
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
 		<style>
-  body
-  {
-	background-image: url(https://istyle.id/wp-content/uploads//2017/04/FUJIFILM-X-T10-1.jpg);
-    background-size: auto;
-  }
-  .navbar {
-      font-family: Montserrat, sans-serif;
-      font-size: 1em !important;
-      letter-spacing: 4px;
-  }
-  .navbar li a, .navbar .navbar-brand { 
-      color:#ff5050  !important;
-  }
-
-  .mt {
-	margin-top: 80px;
-}
-
-.mb {
-	margin-bottom: 80px;
-}
-  .carousel-inner img { 
-      width: 100%; 
-      margin: auto;
-  }
-
-  #about {
-	background-color:#eaeaea;
-}
-h1 {      
-      font-size: 40px;
-      color: #ffffff;
-  }
-
-h2 {
-	font-size: 20px;
-	color: #ffffff;}
-#social {
-	padding-top: 30px;
-	padding-bottom: 30px;
-	background-color: #ffffff;
-}
-
-#social i {
-	font-size: 40px;
-	color: #4a4a4a
-}
-
-#social i:hover {
-	color: #1abc9c
-}
-#footerwrap {
-	padding-top: 70px;
-	padding-bottom: 50px;
-	background-color: #2f2f2f;
-}
-
-#footerwrap p {
-	color: #f2f2f2;
-	margin-left: 10px;
-}
-
-
-  </style>
+		body 
+		{
+			background-image: url(http://backgroundcheckall.com/wp-content/uploads/2017/12/login-background-image-5.png);
+		    background-repeat: no-repeat;
+		    background-size: auto;
+		}
+		.form-group
+		{
+			padding: 40px;
+			width: 350px;
+			background-color: #F7F7F7;
+			margin: 0 auto 10px;
+			border-radius: 2px;
+			box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+			overflow: hidden;
+			
+		}
+	</style>
 </head>
 
 <body>
@@ -91,7 +45,7 @@ h2 {
     	<div class="row">
 		  <div class="col-md-3">
 		  	<div class="sidebar content-box" style="display: block;">
-                <img src="https://istyle.id/wp-content/uploads//2017/04/FUJIFILM-X-T10-1.jpg">
+                <!-- <img src="https://istyle.id/wp-content/uploads//2017/04/FUJIFILM-X-T10-1.jpg"> -->
                  <!--alt="fashion" width="1566" height="774"-->
              </div>
 		  </div>
@@ -103,11 +57,11 @@ h2 {
 		<div class="container">
 		<div class="col-md-4">
 			<!--judul-->
-			  <div class="page-header" style="color:white">
+			  <div class="page-header" style="color:#F5F5F5">
 			  	<h1 class="text-center"><b>Halaman Login</b></h1>
 			  </div>
 			
-		<center><font color="#ffffff">
+		<center><font color="#006600">
 			<?php echo form_open('login/cekLogin'); ?>
 
 				<?php echo validation_errors(); ?>
@@ -115,22 +69,21 @@ h2 {
 				<div class="panel-body">
 			  	<form class="form-horizontal" role="form">
 					<div class="form-group">
-						<h2>
+						<h3>
 						<label for="">Username</label>
 						<input type="text" class="form-control" id="username" name="username" placeholder="Masukkan Username">
-					</div>
-					<div class="form-group">
-						<h2>
+
+						<h3>
 						<label for="">Password</label>
 						<input type="password" class="form-control" id="password" name="password" placeholder="Masukkan Password">
 					</div>
 				
 					<h2>
 						<button type="Submit" class="btn btn-primary">Login</button>
-						<a class="btn btn-danger" href="<?php echo base_url('index.php/portofolio') ?>"><font color="white">
+						<a class="btn btn-danger" href="<?php echo base_url('index.php/web') ?>"><font color="white">
 							Kembali					
 						</a>
-					<br><br><br><br>
+					<br><br>
 					<a class="btn btn-default" href="<?php echo base_url('index.php/registrasi/create/') ?>"><font color="black">
 							Create new account
 							<i class="glyphicon glyphicon-arrow-right"></i>						

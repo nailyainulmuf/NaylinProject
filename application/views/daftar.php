@@ -8,7 +8,8 @@
 	<style>
 		body 
 		{
-			background-image: url(https://istyle.id/wp-content/uploads//2017/04/FUJIFILM-X-T10-1.jpg);
+			background-image: url(http://backgroundcheckall.com/wp-content/uploads/2017/12/login-background-image-5.png);
+		    background-repeat: no-repeat;
 		    background-size: auto;
 		}
 		.form-group
@@ -30,8 +31,8 @@
 		
 	<div class="container">
 
-	  <div class="page-header" style="color:white">
-	  	<h1 class="text-center"><b>Daftar Akun</b></h1>
+	  <div class="page-header" style="color:#F5F5F5">
+	  	<h1 class="text-center">Daftar Akun</h1>
 	  </div>
 
 	  <br>
@@ -43,27 +44,27 @@
 				<?php echo validation_errors(); ?>
 		
 			<label for="">Username</label>
-			<input type="text" class="form-control" id="username" name="username" placeholder="Username anda" >
+			<input type="text" class="form-control" id="username" name="username" placeholder="username.." >
 			<br>
 			<label for="">Password</label>
-			<input type="password" class="form-control" id="password" name="password" placeholder="Password anda">
+			<input type="password" class="form-control" id="password" name="password" placeholder="password..">
 			<br>
 			<label for="">Confirm Password</label>
-			<input type="password" class="form-control" id="confirm" name="confirm" placeholder="Tulis ulang password">
+			<input type="password" class="form-control" id="confirm" name="confirm" placeholder="konfirmasi password..">
 			<br>
 			<label for="">Nama Lengkap</label>
-			<input type="text" class="form-control" id="nama" name="nama" placeholder="Nama lengkap anda">
+			<input type="text" class="form-control" id="nama" name="nama" placeholder="Nama lengkap anda..">
 			<br>
 			<label for="">Email</label>
-			<input type="email" class="form-control" id="email" name="email" placeholder="Email anda">
+			<input type="email" class="form-control" id="email" name="email" placeholder="email..">
 
 			<br>
 			<center>
 				<br>
-				<button type="Submit" class="btn btn-primary">Daftar</button>
-				<a class="btn btn-danger" href="<?php echo base_url('index.php/login') ?>"><font color="white">
-					Kembali					
-				</a>
+				<button type="Submit" class="btn btn-default">Daftar</button>
+				<a class="btn btn-danger" href="<?php echo base_url('index.php/web') ?>"><font color="white">
+							Kembali					
+						</a>
 			</center>
 			
 			<?php echo form_close(); ?>
