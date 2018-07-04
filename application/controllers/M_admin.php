@@ -9,7 +9,6 @@ class M_admin extends CI_Controller {
 			$session_data = $this->session->userdata('logged_in');
 			$data['username'] = $session_data['username'];
 			$data['level'] = $session_data['level'];
-			
 			$current_controller = $this->router->fetch_class();
 			$this->load->library('acl');
 			if(! $this->acl->is_public($current_controller)){
@@ -17,13 +16,25 @@ class M_admin extends CI_Controller {
 					redirect('login/logout', 'refresh');
 				}
 			}
-			$this->load->view('master_admin', $data);
+			$this->load->model('admin_model');
 		}else{
 			redirect('login', 'refresh');
 		}
 	}
 	public function index()
 	{
+		if($this->session->userdata('logged_in')){
+			$session_data = $this->session->userdata('logged_in');
+			$data['username'] = $session_data['username'];
+			$data['level'] = $session_data['level'];
+			$data['id_user'] = $session_data['id_user'];
+		}
+		$data['jml_foto']=$this->admin_model->getListFoto();
+		$data['jml_user']=$this->admin_model->getListUser();
+		/*$data['jml_tips']=$this->admin_model->getListTips();*/
+
+		$this->load->view('master_admin', $data);
+
 		
 		
 	}

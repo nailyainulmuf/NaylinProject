@@ -19,6 +19,13 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+    <style>
+      .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+  }
+
+    </style>
   </head>
   <body>
     <div class="header">
@@ -49,7 +56,7 @@
                       <li class="#"><a href="<?php echo base_url('index.php/admin_foto') ?>"><i class="glyphicon glyphicon-picture"></i> Foto</a></li>
                       <li class="#"><a href="<?php echo base_url('index.php/admin_tips') ?>"><i class="glyphicon glyphicon-list"></i> Tips</a></li>
                       <li><a href="#"><i class="glyphicon glyphicon-list-alt"></i> Komentar</a></li>
-                      <li><a href="#"><i class="glyphicon glyphicon-user"></i> User</a></li>  
+                      <li><a href="<?php echo base_url('index.php/data_user') ?>"><i class="glyphicon glyphicon-user"></i> User</a></li>     
                     </li>
                 </ul>
              </div>
@@ -61,6 +68,25 @@
             <div class="content-box-large">
               <h2>Selamat Datang Di Naylin Project Website Portofolio</h2>
       <span></span>
+      <br>
+          <div class="row slideanim">
+    <div class="col-sm-4"><center>
+      <span class="glyphicon glyphicon-picture logo-small"></span><?php foreach ($jml_foto as $foto) {?>
+      <strong><h4><?php echo $foto ?> Foto</h4><strong>
+      <u><p>Data Keseluruhan Foto</p></u><?php } ?>
+    </div>
+    <div class="col-sm-4"><center>
+      <span class="glyphicon glyphicon-user logo-small"></span><?php foreach ($jml_user as $user) {?>
+      <strong><h4><?php echo $user ?> User</h4><strong>
+      <u><p>Data Keseluruhan User</h4></p><?php } ?>
+    </div>
+    <div class="col-sm-4"><center>
+      <span class="glyphicon glyphicon-list logo-small"></span>
+      <h4>JOB DONE</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+  </div>
+  <br><br>
             </div>
           </div>
         </div>
