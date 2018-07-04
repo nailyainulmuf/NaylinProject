@@ -37,7 +37,16 @@ class Login extends CI_Controller{
 		if ($this->form_validation->run() == FALSE){
 			$this->load->view('login_view');
 		} else {
-			redirect('m_admin','refresh');
+			if($this->session->userdata('logged_in')){
+				$session_data=$this->session->userdata("logged_in");
+				if($session_data['level'] == 'admin'){
+					redirect('m_admin', 'refresh');
+				}else{
+					redirect('user', 'refresh');
+				}
+				
+			}
+			
 		}
 	}
 
@@ -45,7 +54,7 @@ class Login extends CI_Controller{
 	{
 		$this->session->unset_userdata('logged_in');
 		$this->session->sess_destroy();
-		redirect('login', 'refresh');
+		redirect('web', 'refresh');
 	}
 
 }
