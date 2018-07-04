@@ -60,11 +60,23 @@ $acl = array(
 	'login/index' => array(
 		'public'
 	),
+	'web' => array(
+		'admin' => true,
+		'user' => true,
+	),
 	'm_admin' => array(
 		'admin' => true,
 		'user' => false,
 	),
+	'admin_profil' => array(
+		'admin' => true,
+		'user' => false,
+	),
 	'admin_foto' => array(
+		'admin' => true,
+		'user' => false,
+	),
+	'data_user' => array(
 		'admin' => true,
 		'user' => false,
 	),
