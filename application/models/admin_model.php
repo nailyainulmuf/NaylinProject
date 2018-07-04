@@ -8,12 +8,12 @@ class Admin_model extends CI_Model{
 	}
 
 	public function getListFoto(){
-		$query=$this->db->query("select count(id_foto) from foto");
+		$query=$this->db->query("SELECT count(id_foto) from foto");
 		return $query->row();
 	}
 
 	public function getListUser(){
-		$query=$this->db->query("select count(id_user) from user");
+		$query=$this->db->query("SELECT count(id_user) from user");
 		return $query->row();
 	}
 
