@@ -20,12 +20,7 @@
 	<style>
 		body 
 		{
-			background: #F8F8FF;
-			/*putih abu:F8F8FF;
-			beige:F5F5DC;
-			background-repeat: no-repeat;
-		    background-attachment: fixed;
-		    background-size: auto;*/
+			background-color: #474738;
 		}
 
 		.affix {
@@ -52,6 +47,20 @@
 			font-size: 40;
 		}
 
+		.judulfoto{
+			font-family: Times New roman;
+			font-size: 20;
+			text-align: center;
+			color: black;
+		}
+
+		.judultips{
+			font-family: Times New roman;
+			font-size: 20;
+			text-align: justify;
+			color: black;
+		}
+
 		.form-group
 		{
 			padding: 40px;
@@ -65,7 +74,7 @@
 		}
 
 		.futer{
-			background-color: #808080;
+			background-color: #1d1d16;
 			height: 250px;
 			text-align: center;
 		}
@@ -123,10 +132,9 @@
 	  </ul>
 	</nav>
 
-	<!--isi page user-->
-	<div class="container">
-
-	  <!--Gallery-->
+	<!--GALLERY-->
+	<br><br>
+	<div class="container" style="background-color: #F8F8FF">
 	  <br>
 	  <div class="page-header" style="color:black">
 	  	<h1 class="text-center">Gallery</h1>
@@ -139,56 +147,63 @@
 		</button>
 	  </center><br>
 	  
-
-	  <p>Klik aja fotonya.</p>
 	  <div class="row">
-    	
-    	<div class="col-md-4">
-	      <div class="thumbnail">
-    	    <a href="/w3images/lights.jpg" target="_blank">
-        	  <img src="https://rumahdijual.com/attachments/kota-lain/2516369d1427980988-satu-global-property-menjual-property-di-melbourne-australia-logo-satu-global-property.jpg" alt="satu" style="width:100%">
-	          <div class="caption">
-	            <p>ini foto pertama</p>
-	          </div>
-	        </a>
-	      </div>
-	    </div>
 
+	  	<!--tampilan foto-->
 	    <?php $id=1; foreach ($foto_list as $key) : ?>
 	    <div class="col-md-4">
 	      <div class="thumbnail">
-	        <a href="/w3images/nature.jpg" target="_blank">
+	        <a href="<?php echo base_url('assets/images/foto/').$key['photo'] ?>" target="_blank">
 	          <img src="<?php echo base_url('assets/images/foto/').$key['photo'] ?>" alt="dua" style="width:100%">
 	          <div class="caption">
+				<div class="judulfoto">
+	        		<?php echo $key['judul'] ?><br><br>
+	        	</div>
 	          	<p>
-	          		<b>Judul : <?php echo $key['judul'] ?></b><br>
-	          		Kategori:<?php echo $key['nama_kategori'] ?><br>
+	          		Kategori : <?php echo $key['nama_kategori'] ?><br>
 	            	<?php echo $key['deskripsi'] ?>
 	            </p>
 	          </div>
 	        </a>
 	      </div>
+	      <br>
 	    </div>
 	    <?php $id++; endforeach?>
 
-	    <div class="col-md-4">
-	      <div class="thumbnail">
-	        <a href="/w3images/fjords.jpg" target="_blank">
-	          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Bundesstra%C3%9Fe_3_number.svg/1200px-Bundesstra%C3%9Fe_3_number.svg.png" alt="tiga" style="width:100%">
-	          <div class="caption">
-	            <p>terakhir nih, foto ketiga</p>
-	          </div>
-	        </a>
-	      </div>
-	    </div>
-
 	  </div>
+	</div>
+	<br><br><br><br>
 
-	  <!--TIPS-->
+	<!--TIPS-->
+	<div class="container" style="background-color: #F8F8FF">
+	  
 	  <div class="page-header">
 		<h1 class="text-center">TIPS</h1>
 	  </div>
-	  <p>Tips dunia photography:</p>
+
+	  	<!--tampilan tips-->
+	    <?php $id=1; foreach ($tips_list as $key) : ?>
+	    
+	      <div class="thumbnail">
+
+	        <a href="" target="_blank">
+	          <div class="caption">
+
+				<div class="judultips">
+	        		<?php echo $key['judultips'] ?><br><br>
+	        	</div>
+	          	<p>
+	            	<?php echo $key['tips'] ?>
+	            </p>
+
+	          </div>
+	        </a>
+
+	      </div>
+	      <br>
+
+	    
+	    <?php $id++; endforeach?>
 
 	</div>
 	<br><br><br><br>
