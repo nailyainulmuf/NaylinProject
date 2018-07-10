@@ -55,7 +55,8 @@
             <div class="content-box-large">
               <div class="panel-heading">
               <div class="panel-body">
-                <!-- <a href="<?php echo base_url('index.php/data_user/create') ?>" ><button type="button" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i> Tambah Data User</button></a> -->
+                <a href="<?php echo base_url('index.php/data_user/createpdf') ?>" ><button type="button" class="btn btn-default"><i class="glyphicon glyphicon-print"></i> Print Data</button></a>
+                <br><br>
                 <table class="table table-striped" id="example">
                       <thead>
                         <tr>

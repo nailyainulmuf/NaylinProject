@@ -37,7 +37,16 @@ class Data_user extends CI_Controller {
 			
 	}
 
-
+	public function createPdf()
+	{
+	
+		$this->load->library('pdf');
+		$this->load->model('datauser_model');
+		$data["user_list"] = $this->datauser_model->getTampilUser();
+		$this->pdf->load_view('report_datauser', $data);
+		
+	}
+	
 	public function delete($id)
 	{
 		$this->load->model('datauser_model');
