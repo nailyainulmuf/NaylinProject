@@ -20,7 +20,7 @@
 	<style>
 		body 
 		{
-			background-image: url(https://thumbs.dreamstime.com/b/vintage-camera-background-wood-43413984.jpg)
+			background-color: #474738;
 		}
 
 		.affix {
@@ -33,11 +33,39 @@
 			top: 50px;
 		}
 
+		.judul{
+			background-image: url(https://istyle.id/wp-content/uploads//2017/04/FUJIFILM-X-T10-1.jpg);
+			
+			/*background-repeat: no-repeat;
+			height: 570px;
+			width: 1333px;*/
+			position: center;
+		}
+
+		.judultext{
+			font-family: forte;
+			font-size: 40;
+		}
+
+		.judulfoto{
+			font-family: Times New roman;
+			font-size: 20;
+			text-align: center;
+			color: black;
+		}
+
+		.judultips{
+			font-family: Times New roman;
+			font-size: 20;
+			text-align: justify;
+			color: black;
+		}
+
 		.form-group
 		{
-			padding: 40px;
-			width: 350;
-			background-color: #F8F8FF;
+			padding: 35px;
+			/*width: 100px;*/
+			/*background-color: black;*/
 			margin: 0 auto 10px;
 			border-radius: 2px;
 			box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
@@ -46,11 +74,10 @@
 		}
 
 		.futer{
-			background-color: #808080;
-			height: 250px;
+			background-color: #1d1d16;
+			height: 200px;
 			text-align: center;
 		}
-
 	</style>
 
 </head>
@@ -78,58 +105,30 @@
 	  </ul>
 	</nav>
 
-	<div class="container">
-
-	  <div class="page-header" style="color:white">
-	  	<h1 class="text-center"><b>Upload Foto</b></h1>
+	<!--TEXT-->
+	<br><br>
+	<div class="container" style="background-color: #F8F8FF">
+	  <br>
+	  <div class="page-header" style="color:black">
+	  	<h1 class="text-center">Upload sukses</h1>
 	  </div>
 
-	  <!--Form-->
-      <div class="content-box">
-      <br>
-      <?php echo form_open_multipart('user_foto/create'); ?>
+	  <!-- image -->
+	  <center>
+	  	<img src="https://www.vestever.com/en/img/done.png">
+	  	<br><br>
 
-        <center>
-			<font style="color:white"><?php echo validation_errors(); ?></font>
-		</center>
-		<div class="form-group">
+		<a href="<?php echo base_url('index.php/user_setphoto/')?>" class="btn btn-danger">
+			Kembali
+		</a>
+		<br><br>
 
-			<label for="">Judul Foto</label>
-			<input type="text" class="form-control" id="judul" name="judul" placeholder="Isi Judul Foto disini">
-			<br>
+	  </center>
 
-			<label for="">Foto</label>
-			<input type="file" name="userfile" size="20">
-			<br>
+	  </div>
 
-			<label for="">Kategori</label>
-			<select name="kategori" class="form-control">
-				<option selected="selected">---</option>
-				<?php foreach ($kategori_list as $key) : ?>
-					<option value="<?php echo $key['id_kategori'] ?>"><?php echo $key['nama_kategori']?></option>
-				<?php endforeach?>
-            </select>
-            <br>
-
-			<label for="">Deskripsi</label>
-			<input type="text" class="form-control" id="deskripsi" name="deskripsi" placeholder="Isi Deskripsi Foto">
-			<input type="hidden" class="form-control" id="fk_user" name="fk_user" value="">
-			<br>
-
-			<!-- <label for="">ID_user</label>
-            <input type="text" class="form-control" id="fk_user" name="fk_user" placeholder="Masukkan ID User disini"> -->
-			<input type="hidden" class="form-control" id="fk_user" name="fk_user" value="<?php echo $id_user ?>">
-
-			<button type="Submit" class="btn btn-primary">Upload</button>
-			<a href="<?php echo base_url('index.php/user/') ?>" class="btn btn-danger">Kembali</a>
-
-		</div>
-      
-      </div>
-
-      <?php echo form_close(); ?>
-      </div>
-      <br><br>
+	</div>
+	<br><br>
 
 	<!--Footer handmade(contact)-->
 	<div class="futer">
