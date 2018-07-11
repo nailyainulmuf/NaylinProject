@@ -64,13 +64,18 @@ $acl = array(
 		'admin' => true,
 		'user' => true,
 	),
-	'm_admin' => array(
-		'admin' => true,
-		'user' => false,
-	),
 	'user' => array(
 		'admin' => true,
 		'user' => true,
+	),
+	'portofolio' => array(
+		'admin' => true,
+		'user' => true,
+	),
+
+	'm_admin' => array(
+		'admin' => true,
+		'user' => false,
 	),
 	'admin_foto' => array(
 		'admin' => true,
@@ -80,14 +85,15 @@ $acl = array(
 		'admin' => true,
 		'user' => false,
 	),
-	'portofolio' => array(
-		'user' => true,
-		'admin' => true,
-	),
 	'admin_tips' => array(
 		'admin' => true,
 		'user' => false,
-	)
+	),
+
+	'user_foto' => array(
+		'admin' => false,
+		'user' => true,
+	),
 
 );
 
