@@ -98,7 +98,7 @@
 					<font class="judultext">&nbspProject</font>
 				</big>
 				<br>
-				<font>Hello fren, Welcome to NayLinProject</font>
+				<font>Hello <?php echo $username; ?>, Welcome to NayLinProject</font>
 			</div>
 			
 		</div>
@@ -121,13 +121,14 @@
 
 	    <li class="dropdown">
 			<a class="dropdown-toggle" data-toggle="dropdown" href="">
-				<span class="glyphicon glyphicon-user"></span>Profil
+				<span class="glyphicon glyphicon-user"></span><?php echo $username; ?>
 			</a>
 			<ul class="dropdown-menu">
-				<li><a href="<?php echo base_url("index.php/Pengguna/"); ?>">Setting</a></li>
-				<li><a href="#">Logout</a></li>
+				<li><a href="<?php echo base_url("index.php/user_setphoto/"); ?>">My Photo</a></li>
+				<li><a href="<?php echo base_url("index.php/user_setakun/update"); ?>">Edit Profil</a></li>
+				<li><a href="<?php echo base_url('index.php/login/logout') ?>">Logout</a></li>
 			</ul>
-      </li>
+		</li>
 
 	  </ul>
 	</nav>
@@ -154,13 +155,16 @@
 	    <div class="col-md-4">
 	      <div class="thumbnail">
 	        <a href="<?php echo base_url('assets/images/foto/').$key['photo'] ?>" target="_blank">
-	          <img src="<?php echo base_url('assets/images/foto/').$key['photo'] ?>" alt="dua" style="width:100%">
+	          <img src="<?php echo base_url('assets/images/foto/').$key['photo'] ?>" alt="fotonya mana?" style="width:100%">
 	          <div class="caption">
 				<div class="judulfoto">
 	        		<?php echo $key['judul'] ?><br><br>
 	        	</div>
 	          	<p>
-	          		Kategori : <?php echo $key['nama_kategori'] ?><br>
+	          		<font style="color: blue">
+						<span class="glyphicon glyphicon-user"></span> <?php echo $key['nama'] ?><br>
+					</font>
+					Kategori : <?php echo $key['nama_kategori'] ?><br>
 	            	<?php echo $key['deskripsi'] ?>
 	            </p>
 	          </div>
@@ -215,13 +219,13 @@
 			THIS IS FOOTER
 		</font>
 		
-			<br><br>
-			<p><span class="badge badge-secondary">contact :</span></p>
-			<font style="color: #F8F8FF">instagram | @lalalalla </font><br>
-			<font style="color: #F8F8FF">twitter | @lililili</font>
-			<br><br>
-			<p><span class="badge badge-secondary">hi everyone</span></p>
-			<font style="color: #F8F8FF">love photography, this is our galery</font><br>
+		<br><br>
+		<p><span class="badge badge-secondary">contact :</span></p>
+		<font style="color: #F8F8FF">instagram | @lalalalla </font><br>
+		<font style="color: #F8F8FF">twitter | @lililili</font>
+		<br><br>
+		<p><span class="badge badge-secondary">hi everyone</span></p>
+		<font style="color: #F8F8FF">love photography, this is our galery</font><br>
 	</div>
 
 </body>

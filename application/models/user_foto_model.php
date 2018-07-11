@@ -3,6 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class user_foto_model extends CI_Model{
 
+	
 	public function insertFoto()
 	{
 		$data = array (
@@ -12,6 +13,7 @@ class user_foto_model extends CI_Model{
 			'photo'=>$this->upload->data('file_name'), 
 			'fk_user' =>$this->input->post('fk_user')
 		);
+		
 		$this->db->insert('foto', $data);
 	}
 
