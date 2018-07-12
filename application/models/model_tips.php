@@ -9,7 +9,7 @@ class model_tips extends CI_Model{
 
 	public function getTampilTips()
 	{
-		$query = $this->db->query("Select * from tabeltips inner join user");
+		$query = $this->db->query("SELECT * from user as u inner join tabeltips as t on u.id_user = t.id_user");
 		return $query->result_array();
 	}
 
@@ -17,7 +17,7 @@ class model_tips extends CI_Model{
 		$data = array (
 			'judultips'=>$this->input->post('judul'),
 			'tips'=>$this->input->post('tips'), 
-			'id_user'=>$this->input->post('id_user')
+			'id_user'=>$this->input->post('fk_user')
 		);
 		$this->db->insert('tabeltips', $data);
 	}

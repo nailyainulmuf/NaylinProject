@@ -10,6 +10,7 @@
     <!-- Bootstrap --><!-- 
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
     <link href="<?php echo base_url ('assets/css/bootstrap.css') ?>" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo base_url('') ?>assets/datatables.min.css">
     <!-- styles -->
     <link href="<?php echo base_url ('assets/css/styles.css') ?>" rel="stylesheet">
 
@@ -61,7 +62,8 @@
               <div class="panel-heading">
               <div class="panel-body">
                 <a href="<?php echo base_url('index.php/admin_tips/create') ?>" ><button type="button" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i> Tambah Tips</button></a>
-                <table class="table table-striped">
+                <br><br>
+                <table class="table table-striped" id="example">
                       <thead>
                         <tr>
                           <th class= "text-center">No</th>
@@ -115,5 +117,14 @@
     <script type="text/javascript" src="<?php echo base_url ('assets/js/jquery-min.js') ?>"></script>
     <script src="<?php echo base_url ('assets/js/custom.js') ?>"></script>
     <script src="<?php echo base_url ('assets/js/tables.js') ?>"></script>
+    <script src="<?php echo base_url('') ?>assets/datatables.min.js"></script>
+    <script src="<?php echo base_url('') ?>assets/DataTables-1.10.16/jquery.dataTables.min.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#example').DataTable();
+    } );
+  </script>
   </body>
 </html>

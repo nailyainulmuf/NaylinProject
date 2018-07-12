@@ -4,7 +4,7 @@
     <title>NayLin Project </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--icon nama web-->
-  <link rel="icon" type="image/png" href="https://images.vexels.com/media/users/3/127364/isolated/preview/06a7e759827c7b212d7c7eb7dd643c0d-camera-travel-icon-by-vexels.png"></link>
+  <link rel="icon" type="image/png" href="https://cdn2.iconfinder.com/data/icons/seo-web-optomization-ultimate-set/512/custom_settings-512.png"></link>
     <!-- jQuery UI -->
     <link href="https://code.jquery.com/ui/1.10.3/themes/redmond/jquery-ui.css" rel="stylesheet" media="screen">
 
@@ -39,12 +39,12 @@
         <div class="sidebar content-box" style="display: block;">
                 <ul class="nav">
                     <!-- Main menu -->
-                    <li class="#"><a href="<?php echo base_url('index.php/m_admin') ?>"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
+                    <li class=""><a href="<?php echo base_url('index.php/m_admin') ?>"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
                                         <li class="submenu">
                     <li class="#"><a href="<?php echo base_url('index.php/admin_foto') ?>"><i class="glyphicon glyphicon-picture"></i> Foto</a></li>
                     <li class="current"><a href="<?php echo base_url('index.php/admin_tips') ?>"><i class="glyphicon glyphicon-list"></i> Tips</a></li>
                     <li><a href="#"><i class="glyphicon glyphicon-list-alt"></i> Komentar</a></li>
-                    <li><a href="<?php echo base_url('index.php/data_user') ?>"><i class="glyphicon glyphicon-tasks"></i> User</a></li>     
+                    <li class="#"><a href="<?php echo base_url('index.php/data_user') ?>"><i class="glyphicon glyphicon-tasks"></i> User</a></li>     
                     </li>
                 </ul>
              </div>
@@ -63,9 +63,9 @@
             <input type="text" class="form-control" id="judul" name="judul" placeholder="judul tips" value="<?php echo $admin_tips[0]->judultips ?>">
           </div>
           <div class="form-group">
-            <label for="">Tips</label>
-            <input type="text" class="form-control" id="tips" name="tips" placeholder="tips" value="<?php echo $admin_tips[0]->tips ?>">
-          </div>
+                    <label for="">Tips</label>
+                      <textarea class="form-control" type="text" id="tips" name="tips" rows="10"><?php echo $admin_tips[0]->tips ?></textarea>
+                    </div>
           <button type="Submit" class="btn btn-primary">Simpan</button>
           <a href="<?php echo base_url('index.php/admin_tips/') ?>" class="btn btn-info">Kembali</a>
       <?php echo form_close(); ?>
