@@ -20,12 +20,12 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body bgcolor="white">
   	
 
 
 		  	<div class="row">
-      <div class="col-md-9">
+      <div class="col-md-12">
             <div class="content-box-large">
               <div class="panel-heading">
               <div class="panel-body">
@@ -37,7 +37,7 @@
                           <th class= "text-center">Username</th>
                           <th class= "text-center">Nama Lengkap</th>
                           <th class= "text-center">Email</th>
-                          <th class= "text-center">Level</th>
+                          <th class= "text-center">Sebagai</th>
                           
                         </tr>
                       </thead>

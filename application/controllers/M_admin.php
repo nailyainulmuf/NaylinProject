@@ -31,7 +31,7 @@ class M_admin extends CI_Controller {
 		}
 		$data['jml_foto']=$this->admin_model->getListFoto();
 		$data['jml_user']=$this->admin_model->getListUser();
-		/*$data['jml_tips']=$this->admin_model->getListTips();*/
+		$data['jml_tips']=$this->admin_model->getListTips();
 
 		$this->load->view('master_admin', $data);
 

@@ -17,9 +17,9 @@ class Admin_model extends CI_Model{
 		return $query->row();
 	}
 
-	/*public function getListTips(){
-		$query=$this->db->query("select count(id_tips) from tips");
+	public function getListTips(){
+		$query=$this->db->query("select count(id_tips) from tabeltips");
 		return $query->row();
-	}*/
+	}
 
 }

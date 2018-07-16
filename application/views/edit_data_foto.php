@@ -4,7 +4,7 @@
     <title>NayLin Project </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--icon nama web-->
-  <link rel="icon" type="image/png" href="https://images.vexels.com/media/users/3/127364/isolated/preview/06a7e759827c7b212d7c7eb7dd643c0d-camera-travel-icon-by-vexels.png"></link>
+  <link rel="icon" type="image/png" href="https://cdn2.iconfinder.com/data/icons/seo-web-optomization-ultimate-set/512/custom_settings-512.png"></link>
     <!-- jQuery UI -->
     <link href="https://code.jquery.com/ui/1.10.3/themes/redmond/jquery-ui.css" rel="stylesheet" media="screen">
 
@@ -56,7 +56,7 @@
             <div class="content-box-large">
               <h1>Update Data Foto</h1>
     
-      <?php echo form_open('admin_foto/update/'.$this->uri->segment(3)); ?>
+      <?php echo form_open_multipart('admin_foto/update/'.$this->uri->segment(3)); ?>
         <?php echo validation_errors(); ?>
           <div class="form-group">
             <label for="">Judul</label>
@@ -66,6 +66,12 @@
             <label for="">Deskripsi</label>
             <input type="text" class="form-control" id="deskripsi" name="deskripsi" placeholder="tentang foto" value="<?php echo $admin_foto[0]->deskripsi ?>">
           </div>
+          <div class="form-group">
+            <label for="">Foto</label>
+            <img height="100" width="130" src="<?php echo base_url('assets/images/foto/').$admin_foto[0]->photo ?>">
+            <input type="file" class="form-control" name="userfile" placeholder="input field">
+          </div>
+          
           <button type="Submit" class="btn btn-primary">Simpan</button>
           <a href="<?php echo base_url('index.php/admin_foto/') ?>" class="btn btn-info">Kembali</a>
       <?php echo form_close(); ?>

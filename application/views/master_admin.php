@@ -81,9 +81,9 @@
       <u><p>Data Keseluruhan User</h4></p><?php } ?>
     </div>
     <div class="col-sm-4"><center>
-      <span class="glyphicon glyphicon-list logo-small"></span>
-      <h4>JOB DONE</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <span class="glyphicon glyphicon-list logo-small"></span><?php foreach ($jml_tips as $tabeltips) {?>
+      <strong><h4><?php echo $tabeltips ?> Tips</h4><strong>
+      <u><p>Data Keseluruhan Tips</h4></p><?php } ?>
     </div>
   </div>
   <br><br>

@@ -83,20 +83,33 @@ class Admin_foto extends CI_Controller {
 			$data['username'] = $session_data['username'];
 			$data['level'] = $session_data['level'];
 			$data['id_user'] = $session_data['id_user'];
-			
 		}
 		$this->load->model('foto_model');
+		$data['admin_foto']=$this->foto_model->getFoto($id);
 		$this->form_validation->set_rules('judul', 'Judul', 'trim|required');
 		$this->form_validation->set_rules('deskripsi', 'Deskripsi', 'trim|required');
 		
-		$data['admin_foto']=$this->foto_model->getFoto($id);
-
 		if ($this->form_validation->run() == FALSE){
 			$this->load->view('edit_data_foto', $data);
 		}else{
-			$this->foto_model->updateById($id);
-			$this->load->view('sukses_edit_foto');
+			
+				$config['upload_path']			= './assets/images/foto';
+				$config['allowed_types']		= 'gif|jpg|png';
+				$config['max_size']				= 1000000000;
+				$config['max_width']			= 10240;
+				$config['max_height']			= 7680;
 
+				$this->load->library('upload', $config);
+				if ( ! $this->upload->do_upload('userfile'))
+				{
+						$this->foto_model->updateById($id);
+						$this->load->view('sukses_edit_foto');
+				}
+				else
+				{
+						$this->foto_model->updateById($id);
+						$this->load->view('sukses_edit_foto');
+				}
 		}
 	}
 
