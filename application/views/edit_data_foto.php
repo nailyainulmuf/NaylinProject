@@ -63,14 +63,24 @@
             <input type="text" class="form-control" id="judul" name="judul" placeholder="judul foto" value="<?php echo $admin_foto[0]->judul ?>">
           </div>
           <div class="form-group">
-            <label for="">Deskripsi</label>
-            <input type="text" class="form-control" id="deskripsi" name="deskripsi" placeholder="tentang foto" value="<?php echo $admin_foto[0]->deskripsi ?>">
+            <label for="">Kategori</label>
+            <select name="kategori" class="form-control">
+              <option  value="<?php echo $admin_foto[0]->id_kategori ?>">"<?php echo $admin_foto[0]->nama_kategori ?>"</option>
+              <?php foreach ($kategori_list as $key) : ?>
+              <option value="<?php echo $key['id_kategori'] ?>"><?php echo $key['nama_kategori']?></option>
+              <?php endforeach?>
+            </select>
           </div>
           <div class="form-group">
             <label for="">Foto</label>
             <img height="100" width="130" src="<?php echo base_url('assets/images/foto/').$admin_foto[0]->photo ?>">
             <input type="file" class="form-control" name="userfile" placeholder="input field">
           </div>
+          <div class="form-group">
+            <label for="">Deskripsi</label>
+            <input type="text" class="form-control" id="deskripsi" name="deskripsi" placeholder="tentang foto" value="<?php echo $admin_foto[0]->deskripsi ?>">
+          </div>
+          
           
           <button type="Submit" class="btn btn-primary">Simpan</button>
           <a href="<?php echo base_url('index.php/admin_foto/') ?>" class="btn btn-info">Kembali</a>

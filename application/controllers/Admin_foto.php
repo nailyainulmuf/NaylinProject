@@ -52,6 +52,7 @@ class Admin_foto extends CI_Controller {
 		$this->form_validation->set_rules('judul', 'Judul', 'trim|required');
 		$this->form_validation->set_rules('kategori', 'Kategori', 'trim|required');
 		$this->form_validation->set_rules('deskripsi', 'Deskripsi', 'trim|required');
+		$this->form_validation->set_rules('file_name', 'Image', 'trim|required');
 		
 		if ($this->form_validation->run() == FALSE){
 			$this->load->view('input_data_foto', $data);
@@ -86,7 +87,9 @@ class Admin_foto extends CI_Controller {
 		}
 		$this->load->model('foto_model');
 		$data['admin_foto']=$this->foto_model->getFoto($id);
+		$data['kategori_list'] = $this->foto_model->getKategori();
 		$this->form_validation->set_rules('judul', 'Judul', 'trim|required');
+		$this->form_validation->set_rules('kategori', 'Kategori', 'trim|required');
 		$this->form_validation->set_rules('deskripsi', 'Deskripsi', 'trim|required');
 		
 		if ($this->form_validation->run() == FALSE){

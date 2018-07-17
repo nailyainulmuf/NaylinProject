@@ -19,8 +19,7 @@ class Foto_model extends CI_Model{
 	}
 
 	public function getFoto($id){
-		$this->db->where('id_foto', $id);
-		$query=$this->db->get('foto');
+		$query = $this->db->query("SELECT * from foto inner join kategori on foto.id_kategori=kategori.id_kategori where id_foto=$id");
 		return $query->result();
 	}
 
@@ -33,11 +32,11 @@ class Foto_model extends CI_Model{
 
 	public function updateById($id){
 		if($this->upload->data('file_name')==""){
-		$data = array ('judul'=>$this->input->post('judul'), 'deskripsi'=>$this->input->post('deskripsi'));
+		$data = array ('judul'=>$this->input->post('judul'), 'id_kategori'=>$this->input->post('kategori'),'deskripsi'=>$this->input->post('deskripsi'));
 		$this->db->where('id_foto', $id);
 		$this->db->update('foto', $data);
 		}else{
-			$data = array ('judul'=>$this->input->post('judul'), 'deskripsi'=>$this->input->post('deskripsi'), 'photo'=>$this->upload->data('file_name'));
+			$data = array ('judul'=>$this->input->post('judul'), 'id_kategori'=>$this->input->post('kategori'), 'deskripsi'=>$this->input->post('deskripsi'), 'photo'=>$this->upload->data('file_name'));
 		$this->db->where('id_foto', $id);
 		$this->db->update('foto', $data);
 		}
