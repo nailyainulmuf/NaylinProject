@@ -47,10 +47,11 @@
                     <!-- Main menu -->
                     <li class="#"><a href="<?php echo base_url('index.php/m_admin') ?>"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
                                         <li class="submenu">
+                    <li class="#"><a href="<?php echo base_url('index.php/admin_profil') ?>"><i class="glyphicon glyphicon-user"></i> Profil</a></li>
                     <li class="current"><a href="<?php echo base_url('index.php/admin_foto') ?>"><i class="glyphicon glyphicon-picture"></i> Foto</a></li>
                     <li class="#"><a href="<?php echo base_url('index.php/admin_tips') ?>""><i class="glyphicon glyphicon-list"></i> Tips</a></li>
                     <li><a href="#"><i class="glyphicon glyphicon-list-alt"></i> Komentar</a></li>
-                    <li><a href="<?php echo base_url('index.php/data_user') ?>"><i class="glyphicon glyphicon-user"></i> User</a></li>     
+                    <li><a href="<?php echo base_url('index.php/data_user') ?>"><i class="glyphicon glyphicon-tasks"></i> User</a></li>     
                     </li>
                 </ul>
              </div>

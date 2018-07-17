@@ -89,6 +89,10 @@ $acl = array(
 		'admin' => true,
 		'user' => false,
 	),
+	'admin_profil' => array(
+		'admin' => true,
+		'user' => false,
+	),
 
 	'user_foto' => array(
 		'admin' => false,

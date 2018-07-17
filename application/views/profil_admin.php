@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>NayLin Project </title>
+    <title>NayLin Project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--icon nama web-->
-  <link rel="icon" type="image/png" href="https://cdn2.iconfinder.com/data/icons/seo-web-optomization-ultimate-set/512/custom_settings-512.png"></link>
+    <link rel="icon" type="image/png" href="https://cdn2.iconfinder.com/data/icons/seo-web-optomization-ultimate-set/512/custom_settings-512.png"></link>
     <!-- jQuery UI -->
     <link href="https://code.jquery.com/ui/1.10.3/themes/redmond/jquery-ui.css" rel="stylesheet" media="screen">
 
@@ -14,6 +13,12 @@
     <!-- styles -->
     <link href="<?php echo base_url ('assets/css/styles.css') ?>" rel="stylesheet">
 
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>
     <div class="header">
@@ -22,11 +27,11 @@
              <div class="col-md-5">
                 <!-- Logo -->
                 <div class="logo">
-                   <h1><a href="">Admin | Website NayLinProject</a></h1>
+                  <h1><a href="">Admin | Website NayLinProject</a></h1>
                 </div>
              </div>
              <ul class="nav navbar-nav navbar-right">
-         <li><a href=""> Halo,<?php echo $username; ?> sebagai <?php echo $level; ?></a></li> 
+        <li><a href=""> Halo,<?php echo $username; ?> sebagai <?php echo $level; ?></a></li>
         <li><a href="<?php echo base_url('index.php/login/logout') ?>">Logout</a></li>
       </ul>
        </div>
@@ -41,9 +46,9 @@
                     <!-- Main menu -->
                     <li class=""><a href="<?php echo base_url('index.php/m_admin') ?>"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
                                         <li class="submenu">
-                    <li class="#"><a href="<?php echo base_url('index.php/admin_profil') ?>"><i class="glyphicon glyphicon-user"></i> Profil</a></li>
+                    <li class="current"><a href="<?php echo base_url('index.php/admin_profil') ?>"><i class="glyphicon glyphicon-user"></i> Profil</a></li>
                     <li class="#"><a href="<?php echo base_url('index.php/admin_foto') ?>"><i class="glyphicon glyphicon-picture"></i> Foto</a></li>
-                    <li class="current"><a href="<?php echo base_url('index.php/admin_tips') ?>"><i class="glyphicon glyphicon-list"></i> Tips</a></li>
+                    <li class="#"><a href="<?php echo base_url('index.php/admin_tips') ?>""><i class="glyphicon glyphicon-list"></i> Tips</a></li>
                     <li><a href="#"><i class="glyphicon glyphicon-list-alt"></i> Komentar</a></li>
                     <li class="#"><a href="<?php echo base_url('index.php/data_user') ?>"><i class="glyphicon glyphicon-tasks"></i> User</a></li>     
                     </li>
@@ -53,40 +58,44 @@
 
 
         <div class="row">
-          <div class="col-md-9">
+      <div class="col-md-9">
             <div class="content-box-large">
-              <h1>Update Tips</h1>
-    
-      <?php echo form_open('admin_tips/update/'.$this->uri->segment(3)); ?>
-        <?php echo validation_errors(); ?>
-          <div class="form-group">
-            <label for="">Judul</label>
-            <input type="text" class="form-control" id="judul" name="judul" placeholder="judul tips" value="<?php echo $admin_tips[0]->judultips ?>">
-          </div>
-          <div class="form-group">
-                    <label for="">Tips</label>
-                      <textarea class="form-control" type="text" id="tips" name="tips" rows="10"><?php echo $admin_tips[0]->tips ?></textarea>
+              <div class="panel-heading">
+                
+                    <?php foreach ($profilAdmin_list as $key) : ?>
+                       
+                    <div class="page-header" style="color:#006699">
+                    <h1>Profil Anda</h1>
                     </div>
-          <button type="Submit" class="btn btn-primary">Simpan</button>
-          <a href="<?php echo base_url('index.php/admin_tips/') ?>" class="btn btn-info">Kembali</a>
-      <?php echo form_close(); ?>
+                    <h3>Nama Lengkap</h3>
+                    <h5 style="color:#006699" ><?php echo $key['nama'] ?></h5>
+                    <h3>Email</h3>
+                    <h5 style="color:#006699"><?php echo $key['email'] ?></h5>
+                    <h3>Username</h3>
+                    <h5 style="color:#006699"><?php echo $key['username'] ?></h5>
+                    <h3>Anda sebagai</h3>
+                    <h5 style="color:#006699"><?php echo $key['level'] ?></h5>
+                    <?php endforeach?>
+                    <a href="<?php echo base_url('index.php/admin_profil/update/' .$key['id_user']) ?>" class="btn btn-info">Edit Profil</a>
+              </div>
+            </div>
+          </div>
+
         </div>
-        
-
-
       </div>
-    </div>
-    </div>
+  
 
     <footer>
          <div class="container">
          
             <div class="copy text-center">
-               Copyright &copy 2018 <a href='#'>Website NayLinProject</a>
+               Copyright 2018 <a href='#'>Website NayLinProject</a>
             </div>
             
          </div>
-      </footer>
+    </footer>
+      <!-- </footer> -->
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>

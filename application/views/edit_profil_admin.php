@@ -4,7 +4,7 @@
     <title>NayLin Project </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--icon nama web-->
-  <link rel="icon" type="image/png" href="https://cdn2.iconfinder.com/data/icons/seo-web-optomization-ultimate-set/512/custom_settings-512.png"></link>
+  <link rel="icon" type="image/png" href="https://images.vexels.com/media/users/3/127364/isolated/preview/06a7e759827c7b212d7c7eb7dd643c0d-camera-travel-icon-by-vexels.png"></link>
     <!-- jQuery UI -->
     <link href="https://code.jquery.com/ui/1.10.3/themes/redmond/jquery-ui.css" rel="stylesheet" media="screen">
 
@@ -41,9 +41,9 @@
                     <!-- Main menu -->
                     <li class=""><a href="<?php echo base_url('index.php/m_admin') ?>"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
                                         <li class="submenu">
-                    <li class="#"><a href="<?php echo base_url('index.php/admin_profil') ?>"><i class="glyphicon glyphicon-user"></i> Profil</a></li>
+                    <li class="current"><a href="<?php echo base_url('index.php/admin_profil') ?>"><i class="glyphicon glyphicon-user"></i> Profil</a></li>
                     <li class="#"><a href="<?php echo base_url('index.php/admin_foto') ?>"><i class="glyphicon glyphicon-picture"></i> Foto</a></li>
-                    <li class="current"><a href="<?php echo base_url('index.php/admin_tips') ?>"><i class="glyphicon glyphicon-list"></i> Tips</a></li>
+                    <li><a href="<?php echo base_url('index.php/admin_tips') ?>"><i class="glyphicon glyphicon-list"></i> Tips</a></li>
                     <li><a href="#"><i class="glyphicon glyphicon-list-alt"></i> Komentar</a></li>
                     <li class="#"><a href="<?php echo base_url('index.php/data_user') ?>"><i class="glyphicon glyphicon-tasks"></i> User</a></li>     
                     </li>
@@ -55,20 +55,25 @@
         <div class="row">
           <div class="col-md-9">
             <div class="content-box-large">
-              <h1>Update Tips</h1>
+              <h1>Update Profil</h1>
     
-      <?php echo form_open('admin_tips/update/'.$this->uri->segment(3)); ?>
+      <?php echo form_open('admin_profil/update/'.$this->uri->segment(3)); ?>
         <?php echo validation_errors(); ?>
           <div class="form-group">
-            <label for="">Judul</label>
-            <input type="text" class="form-control" id="judul" name="judul" placeholder="judul tips" value="<?php echo $admin_tips[0]->judultips ?>">
+            <label for="">Username</label>
+            <input type="text" class="form-control" id="username" name="username" placeholder="username anda" value="<?php echo $admin_profil[0]['username'] ?>">
           </div>
           <div class="form-group">
-                    <label for="">Tips</label>
-                      <textarea class="form-control" type="text" id="tips" name="tips" rows="10"><?php echo $admin_tips[0]->tips ?></textarea>
-                    </div>
+            <label for="">Nama Lengkap</label>
+            <input type="text" class="form-control" id="nama" name="nama" placeholder="nama lengkap anda" value="<?php echo $admin_profil[0]['nama'] ?>">
+          </div>
+          <div class="form-group">
+            <label for="">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="email anda" value="<?php echo $admin_profil[0]['email'] ?>">
+          </div>
+          
           <button type="Submit" class="btn btn-primary">Simpan</button>
-          <a href="<?php echo base_url('index.php/admin_tips/') ?>" class="btn btn-info">Kembali</a>
+          <a href="<?php echo base_url('index.php/admin_profil/') ?>" class="btn btn-info">Kembali</a>
       <?php echo form_close(); ?>
         </div>
         
