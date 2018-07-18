@@ -154,7 +154,7 @@
 	    <?php $id=1; foreach ($foto_list as $key) : ?>
 	    <div class="col-md-4">
 	      <div class="thumbnail">
-	        <a href="<?php echo base_url('assets/images/foto/').$key['photo'] ?>" target="_blank">
+	        <a href="<?php echo base_url("index.php/user_komen/komen/").$key['id_foto'] ; ?>">
 	          <img src="<?php echo base_url('assets/images/foto/').$key['photo'] ?>" alt="fotonya mana?" style="width:100%">
 	          <div class="caption">
 				<div class="judulfoto">
@@ -167,8 +167,11 @@
 					Kategori : <?php echo $key['nama_kategori'] ?><br>
 	            	<?php echo $key['deskripsi'] ?>
 	            </p>
+	            <button class="btn btn-block">Komentar</button>
 	          </div>
 	        </a>
+	        <table>
+	        </table>
 	      </div>
 	      <br>
 	    </div>
@@ -181,32 +184,22 @@
 	<!--TIPS-->
 	<div class="container" style="background-color: #F8F8FF">
 	  
-	  <div class="page-header">
-		<h1 class="text-center">TIPS</h1>
-	  </div>
+		<div class="page-header">
+			<h1 class="text-center">TIPS</h1>
+		</div>
 
 	  	<!--tampilan tips-->
 	    <?php $id=1; foreach ($tips_list as $key) : ?>
-	    
-	      <div class="thumbnail">
-
-	        <a href="" target="_blank">
-	          <div class="caption">
-
+	    <div class="thumbnail">
+	        <div class="caption">
 				<div class="judultips">
 	        		<?php echo $key['judultips'] ?><br><br>
 	        	</div>
 	          	<p>
 	            	<?php echo $key['tips'] ?>
 	            </p>
-
-	          </div>
-	        </a>
-
-	      </div>
-	      <br>
-
-	    
+	        </div>
+	    </div><br>
 	    <?php $id++; endforeach?>
 
 	</div>
