@@ -17,11 +17,10 @@ class user_foto_model extends CI_Model{
 		$this->db->insert('foto', $data);
 	}
 
-	public function getFoto($id)
+	public function getTampilFoto()
 	{
-		$this->db->where('id_foto', $id);
-		$query=$this->db->get('foto');
-		return $query->result();
+		$query = $this->db->query("Select * from user as u inner join foto as f on u.id_user = f.fk_user inner join kategori as k on k.id_kategori= f.id_kategori");
+		return $query->result_array();
 	}
 
 	public function getKategori()
