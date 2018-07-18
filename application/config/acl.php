@@ -98,6 +98,18 @@ $acl = array(
 		'admin' => false,
 		'user' => true,
 	),
+	'user_setakun' => array(
+		'admin' => false,
+		'user' => true,
+	),
+	'user_setphoto' => array(
+		'admin' => false,
+		'user' => true,
+	),
+	'user_komen' => array(
+		'admin' => false,
+		'user' => true,
+	),
 
 );
 

@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class User_foto extends CI_Controller {
-		public function __construct()
+	public function __construct()
 	{
 		parent::__construct();
 		if($this->session->userdata('logged_in')){
@@ -34,6 +34,7 @@ class User_foto extends CI_Controller {
 		}
 		$this->load->model('user_foto_model');
 		$data["foto_list"] = $this->user_foto_model->getTampilFoto();
+
 		$this->load->view('view_user');
 	}
 
@@ -72,30 +73,6 @@ class User_foto extends CI_Controller {
 						$this->load->view('sukses_user_upload');
 				}
 		}
-	}
-
-	public function update($id)
-	{
-		$this->load->model('user_foto_model');
-		$this->form_validation->set_rules('judul', 'Judul', 'trim|required');
-		$this->form_validation->set_rules('deskripsi', 'Deskripsi', 'trim|required');
-		
-		$data['admin_foto']=$this->user_foto_model->getFoto($id);
-
-		if ($this->form_validation->run() == FALSE){
-			$this->load->view('user_edit_foto', $data);
-		}else{
-			$this->user_foto_model->updateById($id);
-			$this->load->view('user_sukses_edit_foto');
-
-		}
-	}
-
-	public function delete($id)
-	{
-		$this->load->model('user_foto_model');
-		$this->user_foto_model->delete($id);
-		redirect('user_foto');
 	}
 
 }
