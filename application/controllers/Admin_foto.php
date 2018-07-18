@@ -123,4 +123,13 @@ class Admin_foto extends CI_Controller {
 		redirect('admin_foto');
 	}
 
+	public function createPdf()
+	{
+		$this->load->library('pdf');
+		$this->load->model('foto_model');
+		$data["foto_list"] = $this->foto_model->getTampilFoto();
+		$this->pdf->load_view('report_foto', $data);
+		
+	}
+
 }

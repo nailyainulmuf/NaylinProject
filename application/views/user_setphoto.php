@@ -107,11 +107,11 @@
 	  	<h1 class="text-center">My Photo</h1>
 	  </div>
 	  <center>
+	  	<a href="<?php echo base_url('index.php/user_foto/create'); ?>">
 		<button type="button" class="btn btn-info">
-			<a href="<?php echo base_url('index.php/user_foto/create'); ?>">
 				<font style="color: white">Upload Foto</font>
-			</a>
 		</button>
+		</a>
 	  </center><br>
 
 	  <?php echo form_open('user_setphoto/update/'.$this->uri->segment(3));?>

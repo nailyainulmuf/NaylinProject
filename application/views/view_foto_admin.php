@@ -50,7 +50,7 @@
                     <li class="#"><a href="<?php echo base_url('index.php/admin_profil') ?>"><i class="glyphicon glyphicon-user"></i> Profil</a></li>
                     <li class="current"><a href="<?php echo base_url('index.php/admin_foto') ?>"><i class="glyphicon glyphicon-picture"></i> Foto</a></li>
                     <li class="#"><a href="<?php echo base_url('index.php/admin_tips') ?>""><i class="glyphicon glyphicon-list"></i> Tips</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-list-alt"></i> Komentar</a></li>
+                    <li><a href="<?php echo base_url('index.php/komentar') ?>"><i class="glyphicon glyphicon-list-alt"></i> Komentar</a></li>
                     <li><a href="<?php echo base_url('index.php/data_user') ?>"><i class="glyphicon glyphicon-tasks"></i> User</a></li>     
                     </li>
                 </ul>
@@ -64,6 +64,7 @@
               <div class="panel-heading">
               <div class="panel-body">
                 <a href="<?php echo base_url('index.php/admin_foto/create') ?>" ><button type="button" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i> Tambah Data Photo</button></a>
+                <a href="<?php echo base_url('index.php/admin_foto/createpdf') ?>" ><button type="button" class="btn btn-default"><i class="glyphicon glyphicon-print"></i> Print Data</button></a>
                 <br><br>
                 <table class="table table-striped" id="example">
                       <thead>
