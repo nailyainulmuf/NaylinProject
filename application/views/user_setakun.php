@@ -114,7 +114,7 @@
 	  	<h1 class="text-center">Akun</h1>
 	  </div>
 
-	  <?php echo form_open('User_setakun/update/'.$this->uri->segment(3));?>
+	  <?php echo form_open('user_setakun/update/'.$this->uri->segment(3));?>
 
 	  <div class="form-group">
 
