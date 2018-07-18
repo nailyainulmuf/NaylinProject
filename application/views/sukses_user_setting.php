@@ -93,7 +93,7 @@
 
 	    <li class="dropdown">
 			<a class="dropdown-toggle" data-toggle="dropdown" href="">
-				<span class="glyphicon glyphicon-user"></span><?php echo $username; ?>
+				<span class="glyphicon glyphicon-user"></span>Profil
 			</a>
 			<ul class="dropdown-menu">
 				<li><a href="<?php echo base_url("index.php/user_setphoto/"); ?>">My Photo</a></li>
